@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading */
+h1 {
+  color: #222;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container to Align Buttons Horizontally */
+.choice-container {
+  display: flex;
+  justify-content: center;  /* Centers buttons in a row */
+  align-items: center;
+  gap: 40px;  /* Increased space between buttons */
+  margin-top: 40px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Game Buttons */
+.choice-button {
+  height: 130px;
+  width: 130px;
+  border: none;
+  background: radial-gradient(circle, #6dd5ed, #2193b0);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice-button:hover {
+  background: radial-gradient(circle, #2193b0, #6dd5ed);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.choice-button:active {
+  transform: scale(0.95);
+}
+
+/* Game Icons */
+.choice-image {
+  height: 90px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.choice-button:hover .choice-image {
+  transform: rotate(15deg);
+}
+
+/* Add Extra Space Below the Buttons */
+.result-container {
+  margin-top: 60px;  /* Added more space */
+}
+
+/* Result Texts */
+#user-move, #computer-move, #result, #score {
+  font-size: 22px;
+  margin: 15px;
+  font-weight: bold;
+  color: #444;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset Button */
+button {
+  font-size: 18px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .choice-container {
+      flex-direction: column; /* Switch to vertical on small screens */
+  }
+
+  .choice-button {
+      height: 100px;
+      width: 100px;
+  }
+
+  .choice-image {
+      height: 70px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+
+  .result-container {
+      margin-top: 40px;  /* Less space on smaller screens */
+  }
+}
